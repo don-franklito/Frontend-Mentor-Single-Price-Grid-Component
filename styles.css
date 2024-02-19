@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --cyan-light: hsl(179, 47.2%, 51.8%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--light-gray);
+}
+
+button {
+    background-color: var(--bright-yellow);
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    margin-top: 28px;
+    color: var(--white);
+    font-weight: 700;
+}
+
+main {
+    max-width: 634px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+p {
+    line-height: 1.5;
+}
+
+section {
+    padding: 10px 35px;
+}
+
+.welcome {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 100%;
+    background-color: var(--white);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.welcome h2 {
+    color: var(--cyan);
+    font-size: 1.425rem;
+}
+
+.welcome h3 {
+    color: var(--bright-yellow);
+    font-size: 1.1rem;
+}
+
+.welcome p {
+    color: var(--grayish-blue);
+}
+
+.suscription {
+    background-color: var(--cyan);
+    border-bottom-left-radius: 10px;
+}
+
+.suscription p {
+    margin: 0;
+}
+
+.why-us {
+    background-color: var(--cyan-light);
+    border-bottom-right-radius: 10px;
+}
+
+.suscription, .why-us {
+    color: var(--light-gray);
+}
+
+.price-per-month {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px; 
+    align-items: center;
+}
+
+p.price {
+    font-size: 2.175rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) { 
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 50px 20px 0;
+    }
+
+    section {
+        padding: 10px 25px;
+    }
+
+    button {
+        margin-bottom: 15px;
+    }
+
+    .welcome {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .suscription {
+        border-bottom-left-radius: 0;
+    }
+
+    .why-us {
+        border-bottom-left-radius: 10px;
+        margin-bottom: 50px;
+    }
+
+}
